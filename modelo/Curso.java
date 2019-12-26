@@ -9,14 +9,14 @@ package modelo;
  *
  * @author oncel
  */
-class Curso {
+public class Curso {
     
     private String codigoCurso;
     private String nombreCurso;
     private int creditos;
     private double nota;
     
-    Curso(String cod, String non, int cred){
+    public Curso(String cod, String non, int cred){
         this.codigoCurso = cod;
         this.nombreCurso = non;
         this.creditos = cred;
