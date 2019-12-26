@@ -47,4 +47,9 @@ public class Curso {
     public boolean estaCalificado(){
         return false;
     }
+
+    public String getCodigoCurso() {
+        return codigoCurso;
+    }
+    
 }

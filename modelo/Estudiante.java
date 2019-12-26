@@ -23,17 +23,36 @@ public class Estudiante {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.curso1 = new Curso("6561", "algoritmos", 5);
-        this.curso2 = new Curso("6562", "fundamentos de programación", 5);
-        this.curso3 = new Curso("6563", "base de datos", 5);
-        this.curso4 = new Curso("6564", "redes", 5);
-        this.curso5 = new Curso("6565", "calculo integral", 5);
     }
     
     public boolean asignarCurso(Curso curso){
-       
-        return curso != null;
-        
+       int contador = 0;
+        if (curso1 == null) {
+            curso1 = new Curso(curso.getCodigoCurso(), curso.getNombreCurso(), curso.getCreditos());
+            contador++;
+            return true;
+        }
+        if (curso2 == null) {
+            curso2 = new Curso(curso.getCodigoCurso(), curso.getNombreCurso(), curso.getCreditos());
+            contador++;
+            return true;
+        }
+        if (curso3 == null) {
+            curso3 = new Curso(curso.getCodigoCurso(), curso.getNombreCurso(), curso.getCreditos());
+            contador++;
+            return true;
+        }
+        if (curso4 == null) {
+            curso4 = new Curso(curso.getCodigoCurso(), curso.getNombreCurso(), curso.getCreditos());
+            contador++;
+            return true;
+        }
+        if (curso5 == null) {
+            curso5 = new Curso(curso.getCodigoCurso(), curso.getNombreCurso(), curso.getCreditos());
+            contador++;
+            return true;
+        }
+        return false;
     }
     
     public double calcularPromedio(){

@@ -5,9 +5,8 @@
  */
 package Principal;
 
-import java.awt.Cursor;
+
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 import modelo.*;
 
 /**
@@ -40,14 +39,18 @@ public class Main {
            System.out.println("Se registró el estudiante con nombre: "+estudiante.getNombre()+" apellido: "
                 +estudiante.getApellido()+" codigo: "+estudiante.getCodigo());
         System.out.println("Asignar curso:");
-        System.out.println(estudiante.asignarCurso(estudiante.getCurso1())?"curso: "+estudiante.getCurso1().getNombreCurso():"");
-        System.out.println(estudiante.asignarCurso(estudiante.getCurso2())?"curso: "+estudiante.getCurso2().getNombreCurso():"");
-        System.out.println(estudiante.asignarCurso(estudiante.getCurso3())?"curso: "+estudiante.getCurso3().getNombreCurso():"");
-        System.out.println(estudiante.asignarCurso(estudiante.getCurso4())?"curso: "+estudiante.getCurso4().getNombreCurso():"");
-        System.out.println(estudiante.asignarCurso(estudiante.getCurso5())?"curso: "+estudiante.getCurso5().getNombreCurso():"");
+        Curso curso1 = new Curso("6561", "algoritmos", 4);
+        Curso curso2 = new Curso("6562", "fundamentos de programación", 3);
+        Curso curso3 = new Curso("6563", "base de datos", 4);
+        Curso curso4 = new Curso("6564", "redes", 4);
+        Curso curso5 = new Curso("6565", "calculo integral", 3);
+        System.out.println(estudiante.asignarCurso(curso1)?"curso: "+estudiante.getCurso1().getNombreCurso():"el estudiante ya llego al tope de incripcions");
+        System.out.println(estudiante.asignarCurso(curso2)?"curso: "+estudiante.getCurso2().getNombreCurso():"el estudiante ya llego al tope de incripcions");
+        System.out.println(estudiante.asignarCurso(curso3)?"curso: "+estudiante.getCurso3().getNombreCurso():"el estudiante ya llego al tope de incripcions");
+        System.out.println(estudiante.asignarCurso(curso4)?"curso: "+estudiante.getCurso4().getNombreCurso():"el estudiante ya llego al tope de incripcions");
+        System.out.println(estudiante.asignarCurso(curso5)?"curso: "+estudiante.getCurso5().getNombreCurso():"el estudiante ya llego al tope de incripcions");
         }else{
             System.out.println("el código tiene que ser numérico");
         }
-       
     }
 }
