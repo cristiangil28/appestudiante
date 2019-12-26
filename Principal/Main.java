@@ -49,6 +49,15 @@ public class Main {
         System.out.println(estudiante.asignarCurso(curso3)?"curso: "+estudiante.getCurso3().getNombreCurso():"el estudiante ya llego al tope de incripcions");
         System.out.println(estudiante.asignarCurso(curso4)?"curso: "+estudiante.getCurso4().getNombreCurso():"el estudiante ya llego al tope de incripcions");
         System.out.println(estudiante.asignarCurso(curso5)?"curso: "+estudiante.getCurso5().getNombreCurso():"el estudiante ya llego al tope de incripcions");
+        
+        
+            System.out.println("Ingrese el código a buscar del curso");
+            String codigoCurso = sc.nextLine();
+            if(estudiante.pensumIncluyeCurso(codigoCurso)){
+                System.out.println("El estudiante se encuentra cursando el curso");
+            }else{
+                System.out.println("El estudiante no está viendo el curso por el momento o el código no corresponde a un curso");
+            }
         }else{
             System.out.println("el código tiene que ser numérico");
         }

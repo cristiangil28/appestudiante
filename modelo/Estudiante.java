@@ -59,15 +59,39 @@ public class Estudiante {
         return 0.0;
     }
     public boolean pensumIncluyeCurso(String codigoCurso){
+        if(this.buscarCurso(codigoCurso) != null){
+            return true;
+        }
         return false;
     }
     public boolean estudianteEstaPrueba(){
         return false;
     }
     public boolean tieneCursosCompletos(String codigoCurso){
+        
         return false;
     }
     public Curso buscarCurso(String codigoCurso){
+        if (this.getCurso1().getCodigoCurso().equals(codigoCurso)) {
+            return this.getCurso1();
+            
+        }
+        if (this.getCurso2().getCodigoCurso().equals(codigoCurso)) {
+            return this.getCurso2();
+            
+        }
+        if (this.getCurso3().getCodigoCurso().equals(codigoCurso)) {
+            return this.getCurso3();
+            
+        }
+        if (this.getCurso4().getCodigoCurso().equals(codigoCurso)) {
+            return this.getCurso4();
+            
+        }
+        if (this.getCurso5().getCodigoCurso().equals(codigoCurso)) {
+            return this.getCurso5();
+            
+        }
         return null;
     }
 
