@@ -87,7 +87,7 @@ public class Estudiante {
         return this.buscarCurso(codigoCurso) != null;
     }
     public boolean estudianteEstaPrueba(){
-        return false;
+        return !(this.calcularPromedio() < 3.5);
     }
     public boolean tieneCursosCompletos(String codigoCurso){
         

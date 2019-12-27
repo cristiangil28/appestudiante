@@ -73,6 +73,7 @@ public class Main {
             System.out.println("Materia: "+estudiante.getCurso5().getNombreCurso()+" nota: "+estudiante.getCurso5().getNota());
             
             System.out.println("Promedio: "+estudiante.calcularPromedio());
+            System.out.println((estudiante.estudianteEstaPrueba())?"el estudiante no se encuentra en prueba académica":"el estudiante se encuentra en prueba académica");
         } else {
             System.out.println("el código tiene que ser numérico");
         }
