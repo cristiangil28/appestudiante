@@ -64,6 +64,15 @@ public class Main {
             estudiante.getCurso3().setNota(3.8);
             estudiante.getCurso4().setNota(4.0);
             estudiante.getCurso5().setNota(3.2);
+            
+            System.out.println("Notas del semestre");
+            System.out.println("Materia: "+estudiante.getCurso1().getNombreCurso()+" nota: "+estudiante.getCurso1().getNota());
+            System.out.println("Materia: "+estudiante.getCurso2().getNombreCurso()+" nota: "+estudiante.getCurso2().getNota());
+            System.out.println("Materia: "+estudiante.getCurso3().getNombreCurso()+" nota: "+estudiante.getCurso3().getNota());
+            System.out.println("Materia: "+estudiante.getCurso4().getNombreCurso()+" nota: "+estudiante.getCurso4().getNota());
+            System.out.println("Materia: "+estudiante.getCurso5().getNombreCurso()+" nota: "+estudiante.getCurso5().getNota());
+            
+            System.out.println("Promedio: "+estudiante.calcularPromedio());
         } else {
             System.out.println("el código tiene que ser numérico");
         }

@@ -56,7 +56,15 @@ public class Estudiante {
     }
     
     public double calcularPromedio(){
-        return 0.0;
+        int creditos = this.getCurso1().getCreditos()+this.getCurso2().getCreditos()+this.getCurso3().getCreditos()+
+                this.getCurso4().getCreditos()+this.getCurso5().getCreditos();
+        double resultado = (this.getCurso1().getCreditos()*this.getCurso1().getNota())+(this.getCurso2().getCreditos()*this.getCurso2().getNota()+
+                (this.getCurso3().getCreditos()*this.getCurso3().getNota())+(this.getCurso4().getCreditos()*this.getCurso4().getNota())+
+                (this.getCurso5().getCreditos()*this.getCurso5().getNota()));
+        
+        resultado/=creditos;
+        
+        return resultado;
     }
     public boolean pensumIncluyeCurso(String codigoCurso){
         if(this.buscarCurso(codigoCurso) != null){
