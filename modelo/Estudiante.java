@@ -56,28 +56,42 @@ public class Estudiante {
     }
     
     public double calcularPromedio(){
-        int creditos = this.getCurso1().getCreditos()+this.getCurso2().getCreditos()+this.getCurso3().getCreditos()+
-                this.getCurso4().getCreditos()+this.getCurso5().getCreditos();
-        double resultado = (this.getCurso1().getCreditos()*this.getCurso1().getNota())+(this.getCurso2().getCreditos()*this.getCurso2().getNota()+
-                (this.getCurso3().getCreditos()*this.getCurso3().getNota())+(this.getCurso4().getCreditos()*this.getCurso4().getNota())+
-                (this.getCurso5().getCreditos()*this.getCurso5().getNota()));
+        int creditos = 0;
+        double resultado = 0.0;
+        if (this.tieneCursosCompletos(this.getCurso1().getCodigoCurso())) {
+            creditos+=this.getCurso1().getCreditos();
+            resultado+=(this.getCurso1().getCreditos()*this.getCurso1().getNota());
+        }
+        if (this.tieneCursosCompletos(this.getCurso2().getCodigoCurso())) {
+            creditos+=this.getCurso2().getCreditos();
+            resultado+=(this.getCurso2().getCreditos()*this.getCurso2().getNota());
+        }
+        if (this.tieneCursosCompletos(this.getCurso3().getCodigoCurso())) {
+            creditos+=this.getCurso3().getCreditos();
+            resultado+=(this.getCurso3().getCreditos()*this.getCurso3().getNota());
+        }
+        if (this.tieneCursosCompletos(this.getCurso4().getCodigoCurso())) {
+            creditos+=this.getCurso4().getCreditos();
+            resultado+=(this.getCurso4().getCreditos()*this.getCurso4().getNota());
+        }
+        if (this.tieneCursosCompletos(this.getCurso5().getCodigoCurso())) {
+            creditos+=this.getCurso5().getCreditos();
+            resultado+=(this.getCurso5().getCreditos()*this.getCurso5().getNota());
+        }
         
         resultado/=creditos;
         
         return resultado;
     }
     public boolean pensumIncluyeCurso(String codigoCurso){
-        if(this.buscarCurso(codigoCurso) != null){
-            return true;
-        }
-        return false;
+        return this.buscarCurso(codigoCurso) != null;
     }
     public boolean estudianteEstaPrueba(){
         return false;
     }
     public boolean tieneCursosCompletos(String codigoCurso){
         
-        return false;
+        return this.buscarCurso(codigoCurso).getNota() >=1.5;
     }
     public Curso buscarCurso(String codigoCurso){
         if (this.getCurso1().getCodigoCurso().equals(codigoCurso)) {
